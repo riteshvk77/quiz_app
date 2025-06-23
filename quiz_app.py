@@ -1,20 +1,4 @@
-# Install required packages
-import subprocess
-import sys
-import os
 
-def install_packages():
-    packages = ["matplotlib", "pandas", "numpy","streamlit"]
-    for package in packages:
-        try:
-            __import__(package)
-        except ImportError:
-            print(f"Installing {package}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-            print(f"{package} installed successfully!")
-
-# Run the installation
-install_packages()
 import streamlit as st
 import random
 import time
